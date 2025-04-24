@@ -1,10 +1,10 @@
-# User API
+# User API REST
 
 Este proyecto es una API REST creada con **Node.js**, utilizando **Express** como framework y **Mongoose** para la conexión y manipulación de una base de datos **MongoDB**. Desarrollada en **TypeScript**, sigue una estructura modular y escalable.
 
 ---
 
-🚀 Tecnologías utilizadas
+## 🚀 Tecnologías utilizadas
 
     Node.js
 
@@ -20,27 +20,25 @@ Este proyecto es una API REST creada con **Node.js**, utilizando **Express** com
 
 ---
 
-📁 Estructura
-<pre> 
-```  
+## 📁 Estructura 
+<pre>  
 ├── src/ 
-│ ├── app.ts # Configuración principal de la app 
-│ ├── server/server.ts # Inicio del servidor 
-│ ├── config/mongodb.ts # Conexión a la base de datos MongoDB 
-│ ├── models/User.ts # Modelo de Mongoose para usuarios 
-│ ├── repositories/ # Lógica para acceso a datos 
+│ ├── app.ts                                            # Configuración principal de la app 
+│ ├── server/server.ts                                  # Inicio del servidor 
+│ ├── config/mongodb.ts                                 # Conexión a la base de datos MongoDB 
+│ ├── models/User.ts                                    # Modelo de Mongoose para usuarios 
+│ ├── repositories/                                     # Lógica para acceso a datos 
 │ │ └── userRepositories.ts 
-│ ├── services/ # Lógica de negocio 
+│ ├── services/                                         # Lógica de negocio 
 │ │ └── UserService.ts 
-│ ├── routes/routes.ts # Rutas de la API 
-│ ├── types/ # Definiciones de tipos 
+│ ├── routes/routes.ts                                  # Rutas de la API 
+│ ├── types/                                            # Definiciones de tipos 
 │ │ ├── RepositoryTypes.ts 
 │ │ └── UserTypes.ts 
-``` 
 </pre>
 ---
 
-📌 Endpoints disponibles
+## 📌 Endpoints disponibles
 
 Estos endpoints se encuentran definidos en src/routes/routes.ts.
 Usuarios
