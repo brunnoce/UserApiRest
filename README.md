@@ -66,7 +66,7 @@ cd UserApiRest
 npm install
 
 # Crea el archivo .env y añade tu URI de conexión a MongoDB
-echo "MONGODB_URI=tu_conexion_a_mongo" > .env
+MONGODB_URL_STRING=url
 
 # Ejecuta la app en modo desarrollo
 npm run dev
