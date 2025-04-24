@@ -20,7 +20,24 @@ Este proyecto es una API REST creada con **Node.js**, utilizando **Express** com
 
 ---
 
-<pre> ``` 📁 Estructura ├── src/ │ ├── app.ts # Configuración principal de la app │ ├── server/server.ts # Inicio del servidor │ ├── config/mongodb.ts # Conexión a la base de datos MongoDB │ ├── models/User.ts # Modelo de Mongoose para usuarios │ ├── repositories/ # Lógica para acceso a datos │ │ └── userRepositories.ts │ ├── services/ # Lógica de negocio │ │ └── UserService.ts │ ├── routes/routes.ts # Rutas de la API │ ├── types/ # Definiciones de tipos │ │ ├── RepositoryTypes.ts │ │ └── UserTypes.ts ``` </pre>
+📁 Estructura
+<pre> 
+```  
+├── src/ 
+│ ├── app.ts # Configuración principal de la app 
+│ ├── server/server.ts # Inicio del servidor 
+│ ├── config/mongodb.ts # Conexión a la base de datos MongoDB 
+│ ├── models/User.ts # Modelo de Mongoose para usuarios 
+│ ├── repositories/ # Lógica para acceso a datos 
+│ │ └── userRepositories.ts 
+│ ├── services/ # Lógica de negocio 
+│ │ └── UserService.ts 
+│ ├── routes/routes.ts # Rutas de la API 
+│ ├── types/ # Definiciones de tipos 
+│ │ ├── RepositoryTypes.ts 
+│ │ └── UserTypes.ts 
+``` 
+</pre>
 ---
 
 📌 Endpoints disponibles
