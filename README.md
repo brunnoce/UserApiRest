@@ -1,60 +1,73 @@
-# 🧪 Node.js + TypeScript Base API
+# User API
 
-Plantilla base para crear APIs con Node.js y TypeScript, con soporte para recarga en desarrollo, alias, rutas organizadas y preparación para producción.
-
----
-
-## 🔥 IDEAL PARA:
-
-    APIs REST
-
-    Backends para login / autenticación
-
-    Proyectos conectados a bases de datos
-
-    Aplicaciones Express escalables
+Este proyecto es una API REST creada con **Node.js**, utilizando **Express** como framework y **Mongoose** para la conexión y manipulación de una base de datos **MongoDB**. Desarrollada en **TypeScript**, sigue una estructura modular y escalable.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+🚀 Tecnologías utilizadas
 
-- **Node.js**
-- **TypeScript**
-- **Express**
-- **ts-node-dev** (para desarrollo con hot reload)
-- **tsconfig-paths** (para usar aliases como `@/`)
-- **dotenv** (manejo de variables de entorno)
-- **cors** (CORS para APIs públicas o frontend separado)
+    Node.js
 
----
+    TypeScript
 
-## 📝 Notas
+    Express
 
-El archivo tsconfig.json está configurado para usar @/ como alias de src/.
+    Mongoose
 
-El código fuente debe ir dentro de la carpeta src/.
+    tsx (para entorno de desarrollo)
 
-El código compilado irá a dist/ al correr npm run build.
+    MongoDB
 
 ---
 
-## 🛠️ Scripts disponibles
+## 📁 Estructura
 
-| Comando        | Descripción                                                      |
-|----------------|------------------------------------------------------------------|
-| `npm run dev`  | Inicia el proyecto en modo desarrollo con recarga automática     |
-| `npm run build`| Compila TypeScript a JavaScript dentro de la carpeta `dist/`     |
-| `npm start`    | Ejecuta el código compilado (modo producción)                    |
-| `npm run clean`| Elimina la carpeta `dist/` para limpiar el proyecto              |
-
-> 🪟 En Windows, el comando `clean` puede requerir reemplazar `rm -rf` por `rmdir /s /q dist`
+├── src/
+│   ├── app.ts                # Configuración principal de la app
+│   ├── server/server.ts      # Inicio del servidor
+│   ├── config/mongodb.ts     # Conexión a la base de datos MongoDB
+│   ├── models/User.ts        # Modelo de Mongoose para usuarios
+│   ├── repositories/         # Lógica para acceso a datos
+│   │   └── userRepositories.ts
+│   ├── services/             # Lógica de negocio
+│   │   └── UserService.ts
+│   ├── routes/routes.ts      # Rutas de la API
+│   ├── types/                # Definiciones de tipos
+│   │   ├── RepositoryTypes.ts
+│   │   └── UserTypes.ts
 
 ---
 
-## 🔧 Instalación
+📌 Endpoints disponibles
+
+Estos endpoints se encuentran definidos en src/routes/routes.ts.
+Usuarios
+
+    GET /users → Obtener todos los usuarios
+
+    GET /users/:id → Obtener un usuario por ID
+
+    POST /users → Crear un nuevo usuario
+
+    PUT /users/:id → Actualizar un usuario existente
+
+    DELETE /users/:id → Eliminar un usuario
+
+---
+
+## 📦 Instalación
 
 ```bash
-git clone https://github.com/brunnoce/base-node-ts
-cd base-node-ts
+# Clonar el repositorio
+git clone https://github.com/brunnoce/UserApiRest.git
+cd UserApiRest
+
+# Instala las dependencias
 npm install
+
+# Crea el archivo .env y añade tu URI de conexión a MongoDB
+echo "MONGODB_URI=tu_conexion_a_mongo" > .env
+
+# Ejecuta la app en modo desarrollo
 npm run dev
+```
